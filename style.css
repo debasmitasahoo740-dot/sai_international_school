@@ -2083,3 +2083,67 @@ body {
     font-size: 14px;
   }
 }
+
+
+
+
+
+
+
+
+/* Make the school header sticky at the top */
+.school-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Mobile Hamburger Button Styling */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Responsive Navigation for Screens Under 768px */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Shows the 3 lines/hamburger button on mobile screens */
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default on mobile until clicked */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #0b2246;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 0;
+  }
+
+  /* Toggled open via JavaScript */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 10px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .profile-area {
+    display: none; /* Hide profile icon on mobile to prevent overflow */
+  }
+}
